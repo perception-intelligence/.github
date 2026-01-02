@@ -1,58 +1,86 @@
-# llm.txt format README.md for - AI/LLM Context for SuperPlan
-# This file provides structured context for AI agents and LLMs about this website.
-# Learn more: https://llmstxt.org/
+# SuperPlan
 
-# Product Overview
-> SuperPlan is a structured planning layer for AI agents. It creates a machine-readable product index that AI coding agents (like Cursor, Windsurf, Replit, v0) can use to build exactly what you want, without drift.
+SuperPlan is a structured planning layer for AI agents and AI driven systems.  
+It focuses on making goals, constraints, and intent explicit before execution so agents behave predictably instead of drifting or hallucinating.
 
-# Company Information
-name: SuperPlan
-tagline: Structured planning for AI Agents
-status: Public Beta (v0.1)
-website: https://superplan.md
+This repository provides high level context about SuperPlan for both humans and AI systems.
 
-# Core Problem
-> AI agents fail without structured context. When you prompt an AI coding agent with vague ideas, you get drift, rework, and misaligned features. SuperPlan solves this by creating a structured context index - a single source of truth for your product.
+## What problem SuperPlan solves
 
-# How It Works
-1. Drop in your mess - Upload docs, call recordings, Loom videos, or paste raw brain dumps
-2. We draft & ask - Our agent analyzes inputs, drafts a structured spec, and surfaces clarifying questions
-3. Refine thesis & index - Compile answers into a living "Product Index" (JSON) that evolves with your product
-4. Ship with agents - Connect coding agents to the Index for zero-drift builds
+Most failures in AI agent systems are not caused by model quality.  
+They happen because intent is underspecified.
 
-# Key Concepts
-## Product Index
-- Connects ideas, features, constraints, and iterations into one queryable map
-- Machine-readable format (JSON) that agents can consume
-- Reusable across features and versions
+Common issues include:
+- Vague or shifting goals
+- Constraints that exist only in natural language
+- Assumptions that are never made explicit
+- Specifications scattered across documents and conversations
 
-## Product Thesis
-- Your product explained like a good junior-mid PM would
-- Assumptions, constraints, and edge cases in one doc
-- Sized for both humans and AI agents
+When agents are forced to infer missing structure, they fill the gaps confidently. That is where drift and hallucination originate.
 
-# Target Audience
-- Freelancers and vibe coders using AI agents
-- Product Managers (PMs)
-- Founders and executives
-- Anyone who uses AI agents heavily and wants a repeatable system
+SuperPlan treats planning as a first class system concern rather than an afterthought.
 
-# Integrations
-- Compatible with: Cursor, Windsurf, Replit, v0
-- Future: MCP server + direct integrations
+## Core idea
 
-# Pricing
-- Early builder pricing: ~$5-12/month with usage-based components
-- Final pricing may vary based on usage patterns
+Separate planning from execution.
 
-# Key Pages
-- /: Landing page with product overview
-- /privacy: Privacy policy
-- /terms: Terms of service
+Before any agent is allowed to act, SuperPlan forces clarity around:
+- The actual goal
+- Constraints that must be respected
+- Allowed actions
+- Assumptions being made
+- What success looks like
 
-# Contact
-- Waitlist: Available on the landing page
+Once intent is fixed, execution becomes more reliable and failures become debuggable engineering problems instead of unpredictable model behavior.
 
-# Technical Stack
-- Built with: Next.js 16, React 19, TypeScript, Tailwind CSS v4
-- Deployed on: Cloudflare Pages
+## How SuperPlan fits into AI systems
+
+SuperPlan does not replace models, agents, or tool calling frameworks.
+
+It sits above execution layers and focuses on intent definition before action. This makes it useful for systems where AI interacts with real infrastructure, APIs, or workflows.
+
+## Machine readable planning context
+
+SuperPlan explores representing intent in structured formats that AI agents can reliably consume. This includes ideas like:
+- A structured product or task index
+- Explicit constraints and assumptions
+- Clear success criteria
+
+The goal is to give agents a stable source of truth instead of relying on long prompts that drift over time.
+
+## Target audience
+
+- Engineers building AI agent systems
+- Founders and teams using AI driven workflows
+- Product and platform engineers concerned with reliability
+- Anyone running AI systems that interact with real world state
+
+## Project status
+
+SuperPlan is under active development and exploration.  
+Current focus areas include:
+- Clarifying planning and execution boundaries
+- Understanding real world failure modes
+- Defining practical system patterns before locking APIs
+
+## Learn more
+
+Main site  
+https://superplan.md
+
+Technical writing and deep dives  
+https://blog.superplan.md
+
+A good starting point is the article on why AI agents hallucinate and how missing planning contributes to it.
+
+## Contact
+
+Support and inquiries  
+support@superplan.md
+
+## Technical notes
+
+SuperPlan is currently implemented as a web based system and documentation layer. Specific implementation details will evolve as patterns stabilize.
+
+---
+
