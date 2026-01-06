@@ -1,4 +1,4 @@
-# SuperPlan
+# SuperPlan.md
 
 SuperPlan is a structured planning layer for AI agents and AI driven systems.  
 It focuses on making goals, constraints, and intent explicit before execution so agents behave predictably instead of drifting or hallucinating.
